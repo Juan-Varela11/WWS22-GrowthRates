@@ -1,0 +1,1037 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     50007,       1029]
+NotebookOptionsPosition[     46461,        978]
+NotebookOutlinePosition[     46988,        997]
+CellTagsIndexPosition[     46945,        994]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Copy of Jatin\[CloseCurlyQuote]s function definitions written in Project \
+Function with Options-parralelized.nb (NOTE: some are edited slightly)
+
+Function which gives some information about the generated WM (not needed as \
+all information can be produced in def. of WM)\
+\>", "Text",
+ CellChangeTimes->{{3.850404061838717*^9, 3.850404124880357*^9}, {
+  3.850429936971615*^9, 
+  3.8504299706472044`*^9}},ExpressionUUID->"27c135a2-ec7a-42c4-90b7-\
+9d8411d41ede"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"wolframModelObjectProperties", "[", "x_", "]"}], " ", ":=", " ", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"x", "[", "\"\<Rules\>\"", "]"}], ",", " ", "\[IndentingNewLine]", 
+    RowBox[{"x", "[", "\"\<StatesPlotsList\>\"", "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"x", "[", "\"\<VertexCountList\>\"", "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"x", "[", "\"\<EdgeCountList\>\"", "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{
+      RowBox[{"ListPlot", "[", 
+       RowBox[{"x", "[", "\"\<VertexCountList\>\"", "]"}], "]"}], ",", 
+      RowBox[{
+      "PlotLabel", "\[Rule]", " ", 
+       "\"\<Growth Rates for Vertex of Initial State being Self-Loop\>\""}]}],
+      "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{
+      RowBox[{"ListPlot", "[", 
+       RowBox[{"x", "[", "\"\<EdgeCountList\>\"", "]"}], "]"}], ",", 
+      RowBox[{
+      "PlotLabel", "\[Rule]", " ", 
+       "\"\<Growth Rates for Edge of Initial State being Self-Loop\>\""}]}], 
+     "]"}]}], "\[IndentingNewLine]", "}"}]}]], "Input",
+ CellChangeTimes->{{3.802953835578681*^9, 3.802953858702188*^9}, {
+   3.803023778675852*^9, 3.8030238303620815`*^9}, 3.803026239907283*^9, {
+   3.8030262819495826`*^9, 3.8030262839932065`*^9}, 3.8030310492660265`*^9, {
+   3.8030311864253654`*^9, 3.8030312244315853`*^9}, {3.8031162046097565`*^9, 
+   3.803116218891843*^9}, {3.8031182699768085`*^9, 3.803118281432598*^9}, {
+   3.8031186468480015`*^9, 3.8031186916033134`*^9}, {3.8031188159306817`*^9, 
+   3.803118833127686*^9}, {3.803119357865718*^9, 3.803119362911688*^9}, {
+   3.803127621835116*^9, 3.803127626313838*^9}, {3.803362651864606*^9, 
+   3.803362732500819*^9}, {3.8033629484708705`*^9, 3.803362950556308*^9}, {
+   3.8033629880761766`*^9, 3.803362989011013*^9}, {3.8033630281546164`*^9, 
+   3.803363031487994*^9}, {3.803363328465394*^9, 3.8033633333842497`*^9}, {
+   3.803363386922305*^9, 3.8033634012141676`*^9}, {3.803363522264537*^9, 
+   3.8033635596725245`*^9}, {3.803363610739936*^9, 3.8033636117766633`*^9}, {
+   3.8033636450925555`*^9, 3.803363661949217*^9}, {3.8033637358711967`*^9, 
+   3.8033637411709404`*^9}, {3.803375093946415*^9, 3.8033751063663373`*^9}, {
+   3.803375497495677*^9, 3.8033755003064213`*^9}, {3.803375666440771*^9, 
+   3.803375668915455*^9}, 3.803465880966505*^9, {3.803466719270935*^9, 
+   3.8034668558659616`*^9}, {3.803601130832596*^9, 3.803601132642561*^9}, {
+   3.8504028612750187`*^9, 3.8504028681827264`*^9}, {3.8504036194275436`*^9, 
+   3.850403619900955*^9}, {3.850403667299842*^9, 3.8504036677759933`*^9}, {
+   3.850403882867858*^9, 3.850403886478708*^9}, 3.8504302964465446`*^9, {
+   3.8504928029996514`*^9, 3.850492803073454*^9}, {3.8506502907261276`*^9, 
+   3.8506503026840324`*^9}, {3.8506503520665865`*^9, 3.850650355038843*^9}, {
+   3.8506522145583553`*^9, 3.850652251622938*^9}, {3.8508449403027616`*^9, 
+   3.8508449515125303`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"0b51c596-d824-491e-8311-2c527d1a7798"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"wolframModelObjectProperties", " ", "::", " ", "usage"}], " ", 
+   "=", " ", 
+   "\"\<WolframModelObjectProperties takes a WolframModelEvolutionObject as \
+an input. It gives the list of: its underlying Rules, Initial State, Final \
+State, its vertex and edge count list, list of diameter at each stage, and \
+whether the hypergraph is final connected or not. NOTE: No options should be \
+listed in definition of WolframModelEvolutionObject\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.8031278452438936`*^9, 3.80312784612915*^9}, {
+   3.803362992010767*^9, 3.8033629931089835`*^9}, {3.8033630362456183`*^9, 
+   3.803363084908963*^9}, {3.803363131083987*^9, 3.803363159838498*^9}, {
+   3.803466678289093*^9, 3.803466707884444*^9}, {3.850402872399856*^9, 
+   3.85040287546104*^9}, {3.8504039614611635`*^9, 3.8504039830864525`*^9}, 
+   3.850430290478734*^9, {3.850492808673891*^9, 3.85049280878082*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"5753a6a6-c297-4b56-879f-68baf8720fae"],
+
+Cell["\<\
+
+Function which can be Mapped onto the list of randomly generated WMs to check \
+which survive at least 3 generations\
+\>", "Text",
+ CellChangeTimes->{
+  3.8504040519897757`*^9, {3.8504298959801455`*^9, 3.8504299314085317`*^9}, {
+   3.850479407907733*^9, 
+   3.8504794301164246`*^9}},ExpressionUUID->"85f44986-0599-4100-b4a8-\
+0c4867c7286d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"wolframModelSignGrowthCon", "[", "x_", "]"}], " ", ":=", " ", "\n",
+   " ", 
+  RowBox[{"Table", "[", "\n", " ", 
+   RowBox[{
+    RowBox[{"If", "[", "\n", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", 
+            "\"\<EventGenerationsList\>\"", "]"}], ",", " ", 
+           RowBox[{
+            RowBox[{"#", " ", ">", " ", "3"}], " ", "&"}]}], "]"}], "]"}], 
+        ">", " ", "0"}], " ", "&&", 
+       RowBox[{
+        RowBox[{
+        "ResourceFunction", "[", "\"\<ConnectedHypergraphQ\>\"", "]"}], "[", 
+        RowBox[{
+         RowBox[{"x", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "[", " ", "\"\<FinalState\>\"", 
+         "]"}], "]"}]}], ",", " ", "\"\<Passes\>\"", ",", " ", 
+      "\"\<Does Not Pass\>\""}], "\n", "  ", "]"}], "\[IndentingNewLine]", 
+    ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "x", "]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.850432638667036*^9, 3.8504326386950474`*^9}, {
+  3.8504816092317348`*^9, 3.8504816300069523`*^9}, {3.8504820665315127`*^9, 
+  3.8504821019536486`*^9}, {3.8504874685152435`*^9, 3.8504874688799715`*^9}, {
+  3.850492812146058*^9, 3.8504928122238545`*^9}, {3.850500317554653*^9, 
+  3.85050033670198*^9}, {3.850501216515273*^9, 3.850501224239868*^9}, {
+  3.8505620250664887`*^9, 3.8505620264742336`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"ef1408dc-2635-4e20-867d-32268e5e49f5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"wolframModelSignGrowthCon", "::", "usage"}], " ", "=", " ", 
+   "\"\<WolframModelSignGrowthCon takes in a model [x] and returns Passes if \
+it survives past the third generation and is still connected at the final \
+state. Otherwise, it returns Does Not Passes.\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.8031171194573493`*^9, 3.803117243456659*^9}, {
+   3.803120432214385*^9, 3.8031204570884705`*^9}, {3.8033605344513893`*^9, 
+   3.8033605815544863`*^9}, {3.850404582586969*^9, 3.850404622540017*^9}, 
+   3.8504303105926213`*^9, {3.8504928152172503`*^9, 3.8504928153179817`*^9}, {
+   3.850563208682082*^9, 3.8505632809631615`*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"9c71114d-3355-4357-87df-e59a2a2e2aeb"],
+
+Cell[TextData[{
+ "Function which produces list of ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " random rules given a signature"
+}], "Text",
+ CellChangeTimes->{{3.850479336362011*^9, 
+  3.8504793541508503`*^9}},ExpressionUUID->"daa17012-95c1-4ba1-9d72-\
+8f6dc43abb34"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"randomRules", "[", 
+   RowBox[{"x_", ",", "y_", ",", "n_"}], "]"}], " ", ":=", " ", 
+  "\[IndentingNewLine]", 
+  RowBox[{"Table", "[", "\[IndentingNewLine]", "\t ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ResourceFunction", "[", "\"\<RandomWolframModel\>\"", "]"}], 
+     "[", 
+     RowBox[{"x", ",", "y"}], "]"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "n"}], "}"}]}], "\[IndentingNewLine]", "\t", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.8504725512130985`*^9, 3.8504726273656254`*^9}, {
+  3.8504727252744737`*^9, 3.850472735330145*^9}, {3.850472826923702*^9, 
+  3.85047282847019*^9}, {3.850472939845397*^9, 3.85047294391781*^9}, {
+  3.8504732037582436`*^9, 3.850473204223897*^9}, {3.8504733167035117`*^9, 
+  3.8504733268555603`*^9}, {3.850473444312703*^9, 3.850473462875167*^9}, {
+  3.8504752876038055`*^9, 3.850475297420148*^9}, {3.850492817500532*^9, 
+  3.8504928177019935`*^9}, {3.8504992391262016`*^9, 3.8504993323701925`*^9}, {
+  3.850499381366537*^9, 3.85049939326083*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"32829086-bf5b-4b4e-a9db-9bb31aebb48a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"randomRules", "::", "usage"}], " ", "=", " ", 
+   "\"\<RandomRules take in a signature [x] and number of distinct elements \
+[y] and returns as output a list of \
+\!\(\*StyleBox[\"n\",FontSlant->\"Italic\"]\) randomly generated rules in the \
+format of the given signature\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.850472639341153*^9, 3.8504727101965227`*^9}, {
+  3.8504753032742586`*^9, 3.850475304597022*^9}, {3.850478893188795*^9, 
+  3.850478893501709*^9}, {3.8504928200866165`*^9, 3.8504928201843567`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"fdbca934-9f36-4e6a-8f4c-6ab5b2115900"],
+
+Cell["\<\
+Function which can Mapped onto rulelist to produce a list of random models \
+associated to the random rules\
+\>", "Text",
+ CellChangeTimes->{{3.8504793677843714`*^9, 
+  3.850479397992454*^9}},ExpressionUUID->"31ae8502-3bc6-43da-846b-\
+8aaca9305b9b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"modelGenerator", "[", "x_", "]"}], " ", ":=", " ", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ResourceFunction", "[", "\"\<WolframModel\>\"", "]"}], "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "}"}], ",", "Automatic", ",", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<MaxEvents\>\"", "->", "100"}], ",", 
+         RowBox[{"\"\<MaxGenerations\>\"", "->", "10"}]}], "|>"}], ",", 
+       RowBox[{"\"\<IncludePartialGenerations\>\"", "->", "False"}]}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "x", "]"}]}], "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.8504725512130985`*^9, 3.8504726273656254`*^9}, {
+   3.8504727252744737`*^9, 3.850472735330145*^9}, {3.850472826923702*^9, 
+   3.85047282847019*^9}, {3.850472939845397*^9, 3.85047294391781*^9}, {
+   3.8504732037582436`*^9, 3.850473204223897*^9}, {3.8504733167035117`*^9, 
+   3.8504733268555603`*^9}, {3.850473444312703*^9, 3.850473462875167*^9}, {
+   3.8504738192778854`*^9, 3.8504738243439994`*^9}, {3.8504739436251116`*^9, 
+   3.8504740495297775`*^9}, {3.850474102190982*^9, 3.850474102758904*^9}, {
+   3.8504747791094503`*^9, 3.850474784264963*^9}, {3.850477937575589*^9, 
+   3.8504779745316978`*^9}, {3.850478007386018*^9, 3.8504780107832384`*^9}, {
+   3.85047804385128*^9, 3.8504780456240606`*^9}, {3.8504786447713385`*^9, 
+   3.8504786465886106`*^9}, {3.850492822607875*^9, 3.8504928226756935`*^9}, {
+   3.8504929183472333`*^9, 3.850492923214483*^9}, {3.850493279175514*^9, 
+   3.8504932848896*^9}, {3.8504936760319924`*^9, 3.8504936763853765`*^9}, {
+   3.850499691612352*^9, 3.8504997406951675`*^9}, {3.8504998415764303`*^9, 
+   3.8504998794647946`*^9}, 3.8505612892452307`*^9, {3.85056201595398*^9, 
+   3.850562017808075*^9}, {3.8505840742347107`*^9, 3.850584104392501*^9}, 
+   3.8506500614226465`*^9, {3.850740302890045*^9, 3.8507403112606387`*^9}, {
+   3.8507403574323263`*^9, 3.8507403765476475`*^9}, {3.850740574508507*^9, 
+   3.850740575443215*^9}, {3.850740626831626*^9, 3.8507406285914288`*^9}, {
+   3.8507409329261103`*^9, 3.8507409382285957`*^9}, {3.8507409773483763`*^9, 
+   3.850740979506076*^9}, {3.850744492143883*^9, 3.8507444960530977`*^9}, {
+   3.850766594921909*^9, 3.8507666070171137`*^9}, {3.850812240349843*^9, 
+   3.8508122439345098`*^9}, {3.850826381035788*^9, 3.850826388220807*^9}, {
+   3.850830336440363*^9, 3.850830344754448*^9}, {3.850831662573713*^9, 
+   3.8508316708434286`*^9}, {3.8508319715177493`*^9, 3.850831980986434*^9}, {
+   3.850832138175704*^9, 3.850832153853609*^9}, {3.850832186714748*^9, 
+   3.850832196893573*^9}, {3.8508323037948356`*^9, 3.8508323043286505`*^9}, {
+   3.8508375205554247`*^9, 3.8508375794299583`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"152b1e43-5993-4342-8191-8cbebae3ad8a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"modelGenerator", "::", "usage"}], " ", "=", " ", 
+   "\"\<RandomRules take in a list of rules [x]  and produces a list of WMs \
+stemming from those rules. The WMs being with appropriate self-loops, hence \
+the Automatic option used.\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.850472639341153*^9, 3.8504727101965227`*^9}, {
+  3.8504738267465143`*^9, 3.8504739170637207`*^9}, {3.8504786693994284`*^9, 
+  3.8504786786276884`*^9}, {3.8504928243801355`*^9, 3.850492824479869*^9}, {
+  3.850492926623472*^9, 3.8504929281991205`*^9}, {3.850493276141675*^9, 
+  3.8504932765350943`*^9}, {3.85049367833409*^9, 3.8504936784153547`*^9}, {
+  3.850831675486081*^9, 3.850831680105399*^9}, {3.8509253058936615`*^9, 
+  3.8509253227928057`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"42b29a4f-bee7-4735-836f-dee5bcf97406"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"modelGenerator2", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], " ", ":=", " ", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ResourceFunction", "[", "\"\<WolframModel\>\"", "]"}], "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"y", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", "Automatic", ",", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<MaxEvents\>\"", "->", "100"}], ",", 
+         RowBox[{"\"\<MaxGenerations\>\"", "->", "10"}]}], "|>"}], ",", 
+       RowBox[{"\"\<IncludePartialGenerations\>\"", "->", "False"}]}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "y", "]"}]}], "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.8504725512130985`*^9, 3.8504726273656254`*^9}, {
+   3.8504727252744737`*^9, 3.850472735330145*^9}, {3.850472826923702*^9, 
+   3.85047282847019*^9}, {3.850472939845397*^9, 3.85047294391781*^9}, {
+   3.8504732037582436`*^9, 3.850473204223897*^9}, {3.8504733167035117`*^9, 
+   3.8504733268555603`*^9}, {3.850473444312703*^9, 3.850473462875167*^9}, {
+   3.8504738192778854`*^9, 3.8504738243439994`*^9}, {3.8504739436251116`*^9, 
+   3.8504740495297775`*^9}, {3.850474102190982*^9, 3.850474102758904*^9}, {
+   3.8504747791094503`*^9, 3.850474784264963*^9}, {3.850477937575589*^9, 
+   3.8504779745316978`*^9}, {3.850478007386018*^9, 3.8504780107832384`*^9}, {
+   3.85047804385128*^9, 3.8504780456240606`*^9}, {3.8504786447713385`*^9, 
+   3.8504786465886106`*^9}, {3.850492822607875*^9, 3.8504928226756935`*^9}, {
+   3.8504929183472333`*^9, 3.850492923214483*^9}, {3.850493279175514*^9, 
+   3.8504932848896*^9}, {3.8504936760319924`*^9, 3.8504936763853765`*^9}, {
+   3.850499691612352*^9, 3.8504997406951675`*^9}, {3.8504998415764303`*^9, 
+   3.8504998794647946`*^9}, 3.8505612892452307`*^9, {3.85056201595398*^9, 
+   3.850562017808075*^9}, {3.8505840742347107`*^9, 3.850584104392501*^9}, 
+   3.8506500614226465`*^9, {3.850740302890045*^9, 3.8507403112606387`*^9}, {
+   3.8507403574323263`*^9, 3.8507403765476475`*^9}, {3.850740574508507*^9, 
+   3.850740575443215*^9}, {3.850740626831626*^9, 3.8507406285914288`*^9}, {
+   3.8507409329261103`*^9, 3.8507409382285957`*^9}, {3.8507409773483763`*^9, 
+   3.850740979506076*^9}, {3.850744492143883*^9, 3.8507444960530977`*^9}, {
+   3.850766594921909*^9, 3.8507666070171137`*^9}, {3.850812240349843*^9, 
+   3.8508122439345098`*^9}, {3.850826381035788*^9, 3.850826388220807*^9}, {
+   3.850830336440363*^9, 3.850830344754448*^9}, {3.850831662573713*^9, 
+   3.8508316708434286`*^9}, {3.8508319715177493`*^9, 3.850831980986434*^9}, {
+   3.850832138175704*^9, 3.850832153853609*^9}, {3.850832186714748*^9, 
+   3.850832196893573*^9}, {3.8508323037948356`*^9, 3.8508323043286505`*^9}, {
+   3.8508375205554247`*^9, 3.8508375794299583`*^9}, {3.8509252649823027`*^9, 
+   3.8509252748940907`*^9}, {3.8509254983759975`*^9, 
+   3.8509255055625954`*^9}, {3.850926770195736*^9, 3.8509267706487765`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"d4534757-a86f-430b-94b3-eb5c36fd946a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"modelGenerator2", "::", "usage"}], " ", "=", " ", 
+   "\"\<RandomRules take in a set of two rule lists [x] and [y] and produces \
+a list of WMs stemming from those rules. The WMs being with appropriate \
+self-loops, hence the Automatic option used.\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.850472639341153*^9, 3.8504727101965227`*^9}, {
+  3.8504738267465143`*^9, 3.8504739170637207`*^9}, {3.8504786693994284`*^9, 
+  3.8504786786276884`*^9}, {3.8504928243801355`*^9, 3.850492824479869*^9}, {
+  3.850492926623472*^9, 3.8504929281991205`*^9}, {3.850493276141675*^9, 
+  3.8504932765350943`*^9}, {3.85049367833409*^9, 3.8504936784153547`*^9}, {
+  3.850831675486081*^9, 3.850831680105399*^9}, {3.8509252803350945`*^9, 
+  3.8509253180790033`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"d8050a0f-ee33-493c-a64c-1eccd5637c04"],
+
+Cell["\<\
+Will define 2 new functions here, which will filter out exponential and \
+linear scaling WMs and leave those which scale at different rates
+
+
+Look at Jatin\[CloseCurlyQuote]s filters in his function notebook to see how \
+he observed those scalings (Could perhaps just use the LinearRecurrence \
+function in the repository to )
+
+Can just use Jatin\[CloseCurlyQuote]s WolframModelLinearFilter generator \
+(copy and pasted below)
+
+Linear filter:\
+\>", "Text",
+ CellChangeTimes->{{3.8504674011654882`*^9, 3.8504674693390017`*^9}, {
+  3.850480042861014*^9, 3.8504800917226925`*^9}, {3.8504826856208873`*^9, 
+  3.85048269250243*^9}, {3.8504830477764387`*^9, 3.850483048664818*^9}, {
+  3.8504870477269473`*^9, 3.85048709192064*^9}, {3.8505069015308046`*^9, 
+  3.850506905626902*^9}},ExpressionUUID->"32c56437-d90e-4c9f-ba84-\
+6b9aa363bd03"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"wolframModelLinearFilter", "[", "x_", "]"}], " ", ":=", " ", "\n", 
+  RowBox[{"Table", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"FindLinearRecurrence", "[", 
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<VertexCountList\>\"", 
+            "]"}], "]"}], " ", "==", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"-", "1"}]}], "}"}]}], " ", "||", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"FindLinearRecurrence", "[", 
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<VertexCountList\>\"", 
+            "]"}], "]"}], " ", "==", 
+          RowBox[{"{", "1", "}"}]}], "  ", "||", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"FindLinearRecurrence", "[", 
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<EdgeCountList\>\"", 
+            "]"}], "]"}], " ", "==", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", " ", 
+            RowBox[{"-", "1"}]}], "}"}]}], "  ", "||", " ", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"FindLinearRecurrence", "[", 
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<EdgeCountList\>\"", 
+            "]"}], "]"}], " ", "==", 
+          RowBox[{"{", "1", "}"}]}]}], "  ", "]"}], "==", "0"}], 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+      RowBox[{"If", "[", "\n", "     ", "\[IndentingNewLine]", "  ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"FindLinearRecurrence", "[", 
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<VertexCountList\>\"", 
+            "]"}], "]"}], " ", "==", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"-", "1"}]}], "}"}]}], " ", "||", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"FindLinearRecurrence", "[", 
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<VertexCountList\>\"", 
+            "]"}], "]"}], " ", "==", 
+          RowBox[{"{", "1", "}"}]}], "  ", "||", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"FindLinearRecurrence", "[", 
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<EdgeCountList\>\"", 
+            "]"}], "]"}], " ", "==", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", " ", 
+            RowBox[{"-", "1"}]}], "}"}]}], "  ", "||", " ", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"FindLinearRecurrence", "[", 
+           RowBox[{
+            RowBox[{"x", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<EdgeCountList\>\"", 
+            "]"}], "]"}], " ", "==", 
+          RowBox[{"{", "1", "}"}]}]}], "  ", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", ",", "\"\<Does Not Pass\>\"", " ", ",", 
+        "\"\<Passes\>\""}], "\[IndentingNewLine]", "\n", " ", "]"}], 
+      "\[IndentingNewLine]", ",", "\"\<Passes\>\""}], "\[IndentingNewLine]", 
+     "]"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "x", "]"}]}], "}"}]}], "\n", "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.850498086623144*^9, {3.8504981960044928`*^9, 3.850498245151351*^9}, 
+   3.8504982753235044`*^9, {3.8504983727451286`*^9, 3.8504983855816293`*^9}, {
+   3.8504991781991124`*^9, 3.850499180014012*^9}, {3.8505015743963275`*^9, 
+   3.850501594148688*^9}, {3.8505020539808803`*^9, 3.8505020618283725`*^9}, {
+   3.850562006027477*^9, 3.8505620098021274`*^9}, {3.8508310376389475`*^9, 
+   3.8508312994713573`*^9}, {3.850831349780864*^9, 3.850831507877217*^9}, {
+   3.8508315703707657`*^9, 3.850831572100196*^9}, {3.850839392882138*^9, 
+   3.8508395648776927`*^9}, {3.8508397127545805`*^9, 3.8508397163975997`*^9}, 
+   3.8508399603282433`*^9, {3.8508399920084157`*^9, 3.850839995424738*^9}, {
+   3.8508406107754097`*^9, 3.850840612168049*^9}, {3.8508418898125944`*^9, 
+   3.850841894035721*^9}, {3.850842958782262*^9, 3.850842961736327*^9}, {
+   3.850842991832593*^9, 3.850843077779348*^9}, {3.850843475440817*^9, 
+   3.8508434873650684`*^9}, 3.8508436153976784`*^9, {3.850854619396669*^9, 
+   3.8508546777315574`*^9}, {3.8508552609703074`*^9, 3.850855264275428*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"2345fdca-d5c6-473a-8deb-222995d1f132"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"wolframModelLinearFilter", "::", "usage"}], " ", "=", " ", 
+    "\"\<WolframModelLinearFilter takes a WolframModelEvolutionObject as an \
+input and returns Passes if its [VertexCountList] AND [EdgeCountList] both do \
+not show a linear growth rate. It returns Does Not Pass otherwise.\>\""}], 
+   ";"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.850482695428502*^9, 3.850482711528162*^9}, {
+  3.8504870973911276`*^9, 3.850487109771036*^9}, {3.8504928363560905`*^9, 
+  3.8504928364381914`*^9}, {3.8505612569841824`*^9, 3.850561265241922*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"f71d7370-2a9f-42fd-b54c-9b64ae078e9a"],
+
+Cell["\<\
+
+Exponential Filter:\
+\>", "Text",
+ CellChangeTimes->{{3.850506929545025*^9, 3.850506935892132*^9}, {
+  3.8505612321095004`*^9, 
+  3.85056124329224*^9}},ExpressionUUID->"114b0dfb-910c-4b2f-a512-\
+f34e205d76d7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"wolframModelExponentialFilter", "[", "x_", "]"}], ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"objAsmp", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Asymptotic", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"FindSequenceFunction", "[", "y", "]"}], "[", "j", "]"}], 
+           ",", 
+           RowBox[{"j", "->", "Infinity"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"x", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<VertexCountList\>\"",
+               "]"}], ",", 
+             RowBox[{
+              RowBox[{"x", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], "[", "\"\<EdgeCountList\>\"", 
+              "]"}]}], "}"}]}], "}"}]}], "]"}]}], ";", "\n", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Which", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "*", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "^", 
+                 RowBox[{"(", 
+                  RowBox[{"_Integer", "+", 
+                   RowBox[{"_Integer", "*", "_Symbol"}]}], ")"}]}], ")"}]}], 
+              "]"}]}], "]"}], ",", " ", "True", ",", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "^", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "+", 
+                 RowBox[{"_Integer", "*", "_Symbol"}]}], ")"}]}], "]"}]}], 
+            "]"}], ",", "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "^", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "*", "_Symbol"}], ")"}]}], "]"}]}], "]"}],
+            ",", " ", "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "^", 
+               RowBox[{"(", "_Symbol", ")"}]}], "]"}]}], "]"}], ",", " ", 
+           "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "*", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "^", 
+                 RowBox[{"(", 
+                  RowBox[{"_Integer", "*", "_Symbol"}], ")"}]}], ")"}]}], 
+              "]"}]}], "]"}], ",", " ", "True", ",", " ", 
+           "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "*", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "^", 
+                 RowBox[{"(", "_Symbol", ")"}]}], ")"}]}], "]"}]}], "]"}], 
+           ",", " ", "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "*", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "^", 
+                 RowBox[{"(", 
+                  RowBox[{"_Integer", "+", "_Symbol"}], ")"}]}], ")"}]}], 
+              "]"}]}], "]"}], ",", "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "^", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "+", "_Symbol"}], ")"}]}], "]"}]}], "]"}],
+            ",", " ", "True", ",", "\[IndentingNewLine]", "True", ",", " ", 
+           "False"}], " ", "\[IndentingNewLine]", "]"}], " ", "||", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Which", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "*", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "^", 
+                 RowBox[{"(", 
+                  RowBox[{"_Integer", "+", 
+                   RowBox[{"_Integer", "*", "_Symbol"}]}], ")"}]}], ")"}]}], 
+              "]"}]}], "]"}], ",", " ", "True", ",", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "^", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "+", 
+                 RowBox[{"_Integer", "*", "_Symbol"}]}], ")"}]}], "]"}]}], 
+            "]"}], ",", "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "^", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "*", "_Symbol"}], ")"}]}], "]"}]}], "]"}],
+            ",", " ", "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "^", 
+               RowBox[{"(", "_Symbol", ")"}]}], "]"}]}], "]"}], ",", " ", 
+           "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "*", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "^", 
+                 RowBox[{"(", 
+                  RowBox[{"_Integer", "*", "_Symbol"}], ")"}]}], ")"}]}], 
+              "]"}]}], "]"}], ",", " ", "True", ",", " ", 
+           "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "*", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "^", 
+                 RowBox[{"(", "_Symbol", ")"}]}], ")"}]}], "]"}]}], "]"}], 
+           ",", " ", "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "*", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "^", 
+                 RowBox[{"(", 
+                  RowBox[{"_Integer", "+", "_Symbol"}], ")"}]}], ")"}]}], 
+              "]"}]}], "]"}], ",", "True", ",", " ", "\[IndentingNewLine]", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"objAsmp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", " ", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_Integer", "^", 
+               RowBox[{"(", 
+                RowBox[{"_Integer", "+", "_Symbol"}], ")"}]}], "]"}]}], "]"}],
+            ",", " ", "True", ",", "\[IndentingNewLine]", "True", ",", " ", 
+           "False"}], "\[IndentingNewLine]", "]"}]}], ",", 
+        "\[IndentingNewLine]", "\"\<Does Not Pass\>\"", ",", " ", 
+        "\[IndentingNewLine]", "\"\<Passes\>\""}], "\[IndentingNewLine]", 
+       "]"}]}], "\[IndentingNewLine]", "\n", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "x", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\n"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQLWvm2mK24Y3joab6NhD9YOfTEmsg/SHkJZi+c/Sr
+ghOQvvpyqjKINno1JwpE/xD+B6YzTilUg+gsmy4wfUKgsxFEP5hwtQ1EW93+
+k+gMpCPWHksB0Vti7f5EA+l5X3z5Y4A041INURB9IUJFEkSviWq1BdEtvGb2
+IHpJgboHiL6xTMITRLetX20ZC6T/zHkAph9Zqmm9BdkrpmkMoq1eB5R9ANJ9
+V82qQPSCkv8pHBvfOL7Lf5cJomNXfZ4GopXtd08H0Qo67MtBtNgt9vUgWi65
+8iCIvsG28xCIfszp8RxENzdHvwDRfxi/MnACaY0eeUYQDQACbqZN
+  "],
+ CellLabel->"In[29]:=",ExpressionUUID->"bd1c51a9-0b4e-4b11-a664-28c6224b6a14"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"wolframModelExponentialFilter", "::", "usage"}], " ", "=", " ", 
+   "\"\<This function takes in a WolframModelEvolutionObject and returns \
+nothing (Passes) if its [VertexCountList] AND [EdgeCountList] both do not \
+show an exponential growth rate. It returns the WolframModelEvolutionObject \
+(Does Not Pass)otherwise.\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.8033938450430784`*^9, 3.803393963129154*^9}, {
+  3.803394775690917*^9, 3.803394784354373*^9}, {3.8034679359075193`*^9, 
+  3.803467945609166*^9}, {3.8034910192659264`*^9, 3.8034910381378574`*^9}, {
+  3.8505068827192497`*^9, 3.8505068829029417`*^9}, {3.8505599979218187`*^9, 
+  3.8505600380295744`*^9}, {3.850560076132456*^9, 3.8505600921109037`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"7d0265fc-ebf8-4be0-b43d-3dea6ecdc41b"],
+
+Cell["\<\
+
+Main Filter - checks which models passes all the filters, and those are the \
+desirable models. Will output location of specific WM model in modellist so \
+they can be examined (wolframModelObjectProperties function can be used for \
+that reason):\
+\>", "Text",
+ CellChangeTimes->{{3.85056184169003*^9, 
+  3.8505619383620486`*^9}},ExpressionUUID->"fc4b1ac1-fd8e-4a48-826e-\
+98bf05da385e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"wolframExoticGrowthfilter", "[", "x_", "]"}], ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"Intersection", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", 
+     RowBox[{"Position", "[", 
+      RowBox[{
+       RowBox[{"wolframModelSignGrowthCon", "[", "x", "]"}], ",", 
+       "\"\<Passes\>\""}], "]"}], "]"}], ",", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"Position", "[", 
+      RowBox[{
+       RowBox[{"wolframModelLinearFilter", "[", "x", "]"}], ",", 
+       "\"\<Passes\>\""}], "]"}], "]"}], ",", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"Position", "[", 
+      RowBox[{
+       RowBox[{"wolframModelExponentialFilter", "[", "x", "]"}], ",", 
+       "\"\<Passes\>\""}], "]"}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.85056184169003*^9, 3.8505619913889866`*^9}, {
+  3.850562034907095*^9, 3.8505621825858655`*^9}, {3.8505622161794243`*^9, 
+  3.8505622472472887`*^9}, {3.8505624142612715`*^9, 3.850562492109704*^9}, {
+  3.8505625847519617`*^9, 3.850562586890108*^9}, {3.8505628264990215`*^9, 
+  3.850562830138886*^9}, {3.8505628777715125`*^9, 3.850562881102*^9}, {
+  3.8505639136311455`*^9, 3.850563953033041*^9}, {3.8505640079150558`*^9, 
+  3.8505640292879477`*^9}, {3.8505641010778522`*^9, 3.850564156445425*^9}, {
+  3.8505643496029987`*^9, 3.850564353737339*^9}, {3.8505644309630556`*^9, 
+  3.850564505879966*^9}, {3.850566693052567*^9, 3.8505667287751093`*^9}, {
+  3.8505670390854964`*^9, 3.850567065700944*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"7c6c8cf7-3cb2-43aa-8373-bf348ba30e01"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"wolframExoticGrowthfilter", "::", "usage"}], " ", "=", " ", 
+   "\"\<This function takes in a list [x] of WolframModelEvolutionObjects and \
+returns the position of the model in modelist if it passes all filters, and \
+nothing otherwise.\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.8033938450430784`*^9, 3.803393963129154*^9}, {
+  3.803394775690917*^9, 3.803394784354373*^9}, {3.8034679359075193`*^9, 
+  3.803467945609166*^9}, {3.8034910192659264`*^9, 3.8034910381378574`*^9}, {
+  3.8505068827192497`*^9, 3.8505068829029417`*^9}, {3.8505599979218187`*^9, 
+  3.8505600380295744`*^9}, {3.850560076132456*^9, 3.8505600921109037`*^9}, {
+  3.8507410887847085`*^9, 3.8507411600947204`*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"a41e73bb-303e-4040-90cc-159320b0a1ea"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.8508120449626455`*^9},
+ CellLabel->"In[33]:=",ExpressionUUID->"e348de3e-7077-4d9b-a209-b1787f7142ab"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"wolframFilterTest1", "[", 
+   RowBox[{"v_", ",", "x_", ",", "y_", ",", "z_"}], "]"}], ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", 
+        RowBox[{"wolframExoticGrowthfilter", "[", 
+         RowBox[{"modelGenerator", "[", 
+          RowBox[{"v", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}], "]"}], ">", "0"}], 
+      "\[IndentingNewLine]", ",", "\"\<Valid\>\"", ",", "\"\<Non-Valid\>\""}],
+      "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "x", ",", "y", ",", "z"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.85074117624516*^9, 3.850741193819208*^9}, {
+   3.8507413087624617`*^9, 3.850741315577246*^9}, {3.8507413527353263`*^9, 
+   3.8507413577811213`*^9}, {3.850741647068055*^9, 3.850741658476719*^9}, {
+   3.8507417312013454`*^9, 3.850741788622491*^9}, {3.8507419498187675`*^9, 
+   3.8507421006613803`*^9}, {3.8507421387357764`*^9, 
+   3.8507421552616982`*^9}, {3.8507428028258133`*^9, 
+   3.8507428048065643`*^9}, {3.8507430113110075`*^9, 
+   3.8507430123962502`*^9}, {3.8507435825962734`*^9, 3.85074359339815*^9}, {
+   3.850743702028932*^9, 3.8507437033061943`*^9}, 3.8507464276021996`*^9, {
+   3.8507500775144267`*^9, 3.8507500847358227`*^9}, {3.8507508316041636`*^9, 
+   3.850750837388229*^9}, {3.850750953718403*^9, 3.850750965663128*^9}, {
+   3.8507521668983493`*^9, 3.850752187245514*^9}, {3.8507522206081543`*^9, 
+   3.8507522468362303`*^9}, {3.8507546440639544`*^9, 
+   3.8507546494440427`*^9}, {3.8507664475423903`*^9, 3.8507665386779356`*^9}, 
+   3.8508119550035305`*^9, {3.8508120030619607`*^9, 3.850812009981056*^9}, {
+   3.850839122735074*^9, 3.850839125569544*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"9a26cb65-6427-4024-b210-dfe2ead001e4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"wolframFilterTest1", "::", "usage"}], " ", "=", " ", 
+   "\"\<This function takes in a sublist [v] of rules, and returns the \
+position of the subtest within the x to y range of lists that has a model \
+which passes the wolframExoticGrowthFilter. \
+\!\(\*StyleBox[\"z\",FontSlant->\"Italic\"]\) marks the steps in sublists \
+which are being tested i.e. every \!\(\*StyleBox[\"z\",FontSlant->\"Italic\"]\
+\)\!\(\*StyleBox[\" \",FontSlant->\"Italic\"]\)sublist is being tested\>\""}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.8033938450430784`*^9, 3.803393963129154*^9}, {
+  3.803394775690917*^9, 3.803394784354373*^9}, {3.8034679359075193`*^9, 
+  3.803467945609166*^9}, {3.8034910192659264`*^9, 3.8034910381378574`*^9}, {
+  3.8505068827192497`*^9, 3.8505068829029417`*^9}, {3.8505599979218187`*^9, 
+  3.8505600380295744`*^9}, {3.850560076132456*^9, 3.8505600921109037`*^9}, {
+  3.8507410887847085`*^9, 3.8507411600947204`*^9}, {3.8507417061357627`*^9, 
+  3.8507417162829146`*^9}, {3.8507418269778123`*^9, 3.850741841241013*^9}, {
+  3.8507418818795185`*^9, 3.850741910366109*^9}, {3.850743085778292*^9, 
+  3.8507430878605103`*^9}, {3.8507500934839125`*^9, 3.8507500978615694`*^9}, {
+  3.8507508424524283`*^9, 3.8507508693308563`*^9}, {3.850754588078639*^9, 
+  3.850754636431834*^9}, {3.8508119602737017`*^9, 3.8508120153950357`*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"e1d1bca9-b46a-4841-b981-2cbbbe393240"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.8508120474029727`*^9},
+ CellLabel->"In[36]:=",ExpressionUUID->"c65f8de4-d309-4bbd-8844-78d631547e3c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"wolframFilterTest2", "[", 
+   RowBox[{"v_", ",", "w_", ",", "x_", ",", "y_", ",", "z_"}], "]"}], ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", 
+        RowBox[{"wolframExoticGrowthfilter", "[", 
+         RowBox[{"modelGenerator2", "[", 
+          RowBox[{
+           RowBox[{"v", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"w", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "]"}], "]"}], "]"}], ">", "0"}],
+       "\[IndentingNewLine]", ",", "\"\<Valid\>\"", ",", 
+      "\"\<Non-Valid\>\""}], "\[IndentingNewLine]", "]"}], 
+    "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "x", ",", "y", ",", "z"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.85074117624516*^9, 3.850741193819208*^9}, {
+   3.8507413087624617`*^9, 3.850741315577246*^9}, {3.8507413527353263`*^9, 
+   3.8507413577811213`*^9}, {3.850741647068055*^9, 3.850741658476719*^9}, {
+   3.8507417312013454`*^9, 3.850741788622491*^9}, {3.8507419498187675`*^9, 
+   3.8507421006613803`*^9}, {3.8507421387357764`*^9, 
+   3.8507421552616982`*^9}, {3.8507428028258133`*^9, 
+   3.8507428048065643`*^9}, {3.8507430113110075`*^9, 
+   3.8507430123962502`*^9}, {3.8507435825962734`*^9, 3.85074359339815*^9}, {
+   3.850743702028932*^9, 3.8507437033061943`*^9}, 3.8507464276021996`*^9, {
+   3.8507500775144267`*^9, 3.8507500847358227`*^9}, {3.8507508316041636`*^9, 
+   3.850750837388229*^9}, {3.850750953718403*^9, 3.850750965663128*^9}, {
+   3.8507521668983493`*^9, 3.850752187245514*^9}, {3.8507522206081543`*^9, 
+   3.8507522468362303`*^9}, {3.8507546440639544`*^9, 
+   3.8507546494440427`*^9}, {3.8507664475423903`*^9, 3.8507665386779356`*^9}, 
+   3.8508119550035305`*^9, {3.850839104246895*^9, 3.850839113922883*^9}, 
+   3.8509253380876884`*^9, {3.850925468228504*^9, 3.8509254861450224`*^9}, {
+   3.8509255648105373`*^9, 3.8509255772999887`*^9}, {3.850928856033373*^9, 
+   3.850928893141247*^9}, {3.850932228135253*^9, 3.850932236980669*^9}, {
+   3.850932375372552*^9, 3.850932383267733*^9}, {3.8509512390256042`*^9, 
+   3.850951254404563*^9}, {3.8509515313455386`*^9, 3.8509515389126644`*^9}, {
+   3.8509516942671328`*^9, 3.8509517096866755`*^9}, {3.8509517752399535`*^9, 
+   3.850951780248084*^9}, {3.850951856442485*^9, 3.8509518602716866`*^9}, {
+   3.8509518949117937`*^9, 3.8509519039071827`*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"adbe29d9-e18b-47b0-b531-a7b08932ec26"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"wolframFilterTest2", "::", "usage"}], " ", "=", " ", 
+   "\"\<This function takes in sublists [v] and [w] of rules, and returns the \
+position of the subtest within the x to y range of lists that has a model \
+which passes the wolframExoticGrowthFilter. \
+\!\(\*StyleBox[\"z\",FontSlant->\"Italic\"]\) marks the steps in sublists \
+which are being tested i.e. every \!\(\*StyleBox[\"z\",FontSlant->\"Italic\"]\
+\)\!\(\*StyleBox[\" \",FontSlant->\"Italic\"]\)sublist is being tested\>\""}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.8033938450430784`*^9, 3.803393963129154*^9}, {
+  3.803394775690917*^9, 3.803394784354373*^9}, {3.8034679359075193`*^9, 
+  3.803467945609166*^9}, {3.8034910192659264`*^9, 3.8034910381378574`*^9}, {
+  3.8505068827192497`*^9, 3.8505068829029417`*^9}, {3.8505599979218187`*^9, 
+  3.8505600380295744`*^9}, {3.850560076132456*^9, 3.8505600921109037`*^9}, {
+  3.8507410887847085`*^9, 3.8507411600947204`*^9}, {3.8507417061357627`*^9, 
+  3.8507417162829146`*^9}, {3.8507418269778123`*^9, 3.850741841241013*^9}, {
+  3.8507418818795185`*^9, 3.850741910366109*^9}, {3.850743085778292*^9, 
+  3.8507430878605103`*^9}, {3.8507500934839125`*^9, 3.8507500978615694`*^9}, {
+  3.8507508424524283`*^9, 3.8507508693308563`*^9}, {3.850754588078639*^9, 
+  3.850754636431834*^9}, {3.8508119602737017`*^9, 3.850811990205825*^9}, {
+  3.8508120203724775`*^9, 3.850812033268224*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"7ba9fb20-8c6a-46ae-a8de-6748ffc2ace7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"x", "=", "1"}], "\[IndentingNewLine]", 
+ RowBox[{"y", "=", "100"}], "\n", 
+ RowBox[{"i", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8509287989860277`*^9, 3.850928842907118*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"5bd4f6c3-2692-4cf5-8830-563590d83b84"],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.850985962181074*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"ad8ff9db-26bb-42c9-bf6c-c18f84315551"],
+
+Cell[BoxData["100"], "Output",
+ CellChangeTimes->{3.850985962196695*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"e7bd95c6-c419-4244-bc9b-6566df8316dd"],
+
+Cell[BoxData["89"], "Output",
+ CellChangeTimes->{3.850985962196695*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"51198000-4b94-42c9-b253-3e8befc90f6d"]
+}, Open  ]]
+},
+WindowSize->{949., 472.5},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+Magnification:>0.75 Inherited,
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4c0a0ac0-bf72-45ee-acc8-b39ee4e2375c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 472, 10, 63, "Text",ExpressionUUID->"27c135a2-ec7a-42c4-90b7-9d8411d41ede"],
+Cell[1033, 32, 3061, 53, 122, "Input",ExpressionUUID->"0b51c596-d824-491e-8311-2c527d1a7798"],
+Cell[4097, 87, 1028, 16, 64, "Input",ExpressionUUID->"5753a6a6-c297-4b56-879f-68baf8720fae"],
+Cell[5128, 105, 351, 9, 45, "Text",ExpressionUUID->"85f44986-0599-4100-b4a8-0c4867c7286d"],
+Cell[5482, 116, 1610, 38, 94, "Input",ExpressionUUID->"ef1408dc-2635-4e20-867d-32268e5e49f5"],
+Cell[7095, 156, 762, 12, 50, "Input",ExpressionUUID->"9c71114d-3355-4357-87df-e59a2a2e2aeb"],
+Cell[7860, 170, 266, 8, 27, "Text",ExpressionUUID->"daa17012-95c1-4ba1-9d72-8f6dc43abb34"],
+Cell[8129, 180, 1130, 22, 79, "Input",ExpressionUUID->"32829086-bf5b-4b4e-a9db-9bb31aebb48a"],
+Cell[9262, 204, 641, 11, 50, "Input",ExpressionUUID->"fdbca934-9f36-4e6a-8f4c-6ab5b2115900"],
+Cell[9906, 217, 259, 6, 27, "Text",ExpressionUUID->"31ae8502-3bc6-43da-846b-8aaca9305b9b"],
+Cell[10168, 225, 2986, 51, 65, "Input",ExpressionUUID->"152b1e43-5993-4342-8191-8cbebae3ad8a"],
+Cell[13157, 278, 856, 14, 50, "Input",ExpressionUUID->"42b29a4f-bee7-4735-836f-dee5bcf97406"],
+Cell[14016, 294, 3266, 57, 65, "Input",ExpressionUUID->"d4534757-a86f-430b-94b3-eb5c36fd946a"],
+Cell[17285, 353, 872, 14, 50, "Input",ExpressionUUID->"d8050a0f-ee33-493c-a64c-1eccd5637c04"],
+Cell[18160, 369, 843, 19, 155, "Text",ExpressionUUID->"32c56437-d90e-4c9f-ba84-6b9aa363bd03"],
+Cell[19006, 390, 4719, 102, 336, "Input",ExpressionUUID->"2345fdca-d5c6-473a-8deb-222995d1f132"],
+Cell[23728, 494, 695, 12, 64, "Input",ExpressionUUID->"f71d7370-2a9f-42fd-b54c-9b64ae078e9a"],
+Cell[24426, 508, 220, 7, 45, "Text",ExpressionUUID->"114b0dfb-910c-4b2f-a512-f34e205d76d7"],
+Cell[24649, 517, 9436, 217, 519, "Input",ExpressionUUID->"bd1c51a9-0b4e-4b11-a664-28c6224b6a14"],
+Cell[34088, 736, 842, 13, 50, "Input",ExpressionUUID->"7d0265fc-ebf8-4be0-b43d-3dea6ecdc41b"],
+Cell[34933, 751, 399, 9, 63, "Text",ExpressionUUID->"fc4b1ac1-fd8e-4a48-826e-98bf05da385e"],
+Cell[35335, 762, 1540, 31, 51, "Input",ExpressionUUID->"7c6c8cf7-3cb2-43aa-8373-bf348ba30e01"],
+Cell[36878, 795, 813, 13, 50, "Input",ExpressionUUID->"a41e73bb-303e-4040-90cc-159320b0a1ea"],
+Cell[37694, 810, 168, 2, 36, "Input",ExpressionUUID->"e348de3e-7077-4d9b-a209-b1787f7142ab"],
+Cell[37865, 814, 1961, 36, 122, "Input",ExpressionUUID->"9a26cb65-6427-4024-b210-dfe2ead001e4"],
+Cell[39829, 852, 1458, 22, 50, "Input",ExpressionUUID->"e1d1bca9-b46a-4841-b981-2cbbbe393240"],
+Cell[41290, 876, 168, 2, 36, "Input",ExpressionUUID->"c65f8de4-d309-4bbd-8844-78d631547e3c"],
+Cell[41461, 880, 2611, 46, 122, "Input",ExpressionUUID->"adbe29d9-e18b-47b0-b531-a7b08932ec26"],
+Cell[44075, 928, 1514, 23, 50, "Input",ExpressionUUID->"7ba9fb20-8c6a-46ae-a8de-6748ffc2ace7"],
+Cell[CellGroupData[{
+Cell[45614, 955, 372, 8, 50, "Input",ExpressionUUID->"5bd4f6c3-2692-4cf5-8830-563590d83b84"],
+Cell[45989, 965, 149, 2, 24, "Output",ExpressionUUID->"ad8ff9db-26bb-42c9-bf6c-c18f84315551"],
+Cell[46141, 969, 151, 2, 24, "Output",ExpressionUUID->"e7bd95c6-c419-4244-bc9b-6566df8316dd"],
+Cell[46295, 973, 150, 2, 24, "Output",ExpressionUUID->"51198000-4b94-42c9-b253-3e8befc90f6d"]
+}, Open  ]]
+}
+]
+*)
+
